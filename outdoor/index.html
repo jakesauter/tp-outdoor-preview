@@ -54,7 +54,13 @@ h3 { font-size: 26px; margin: 18px 0 6px; }
 form { display: grid; gap: 12px; max-width: 720px; } label { display: grid; gap: 4px; color: var(--muted); font-size: 15px; }
 input, select, textarea { font: inherit; color: var(--line); background: rgba(7,28,64,.7); border: 1px solid var(--frame); border-radius: 4px; padding: 10px; }
 .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } .honey { position: absolute; left: -9999px; }
-.msg { min-height: 22px; } footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--frame); padding: 20px var(--g); text-align: center; }
+.msg { min-height: 22px; }
+.btn.ghost { background: transparent; color: var(--line); border: 1px solid var(--frame); margin-left: 6px; }
+.gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 14px 0; } .gal img { width: 100%; height: auto; border-radius: 6px; }
+.shop { border: 1px dashed var(--frame); border-radius: 6px; padding: 10px 14px; margin: 10px 0; color: var(--muted); } .shop b { color: var(--line); margin-right: 8px; }
+dialog { border: 1px solid var(--frame); background: #0b2f66; color: var(--line); padding: 0; width: min(900px, 96vw); border-radius: 8px; }
+dialog::backdrop { background: rgba(0,0,0,.6); } dialog canvas { display: block; width: 100%; height: min(70vh, 640px); }
+dialog .bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; color: var(--muted); font-size: 14px; } footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--frame); padding: 20px var(--g); text-align: center; }
 @media (max-width: 760px) { .grid2, .row { grid-template-columns: 1fr; } .top .ph { display: none; } }
 </style></head>
 <body>
@@ -85,8 +91,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/rocket-stove.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>15&quot; L x 14&quot; W x 22-1/2&quot; H</td></tr><tr><th>Burner</th><td>4&quot; x 4&quot; x 11 ga tube</td></tr><tr><th>Pot support</th><td>fits 6&quot;–14&quot; pans</td></tr><tr><th>Fuel</th><td>sticks, twigs, scrap wood</td></tr><tr><th>Finish</th><td>2000 °F flat black</td></tr><tr><th>Weight</th><td>about 25 lb</td></tr></table>
       <p class="note">Founding price $149 for the first 10. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="TP Rocket Stove">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="TP Rocket Stove">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="rocket-stove">Spin it in 3D</button></div>
   </div>
+  <div class="gal"><img src="img/rocket-stove-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/RS-1-build-guide.pdf">Build guide (PDF)</a> · <a href="files/RS-1-laser-dxf.zip">Laser files (DXF, zip)</a> · 4 laser parts, 8 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Saw: two 4&quot; tubes, 45° miters</li><li>Laser: legs, pot support, fuel shelf</li><li>Press brake: shelf channel</li><li>MIG: elbow seam, legs, handle</li><li>High-heat paint + test burn</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>L-shaped burn chamber: strong draft, little smoke</li><li>Removable fuel shelf: air under the wood, easy to clean</li><li>Slot-together pot support: no rattle, lifts off to pack</li><li>Heavy 11 ga tube and 3/16&quot; legs: built to last</li><li>Spring handle sheds heat (use a glove when it&#x27;s hot)</li><li>Heavy-duty option: 3/16&quot; wall tube for years of daily use (+$40)</li></ul></div>
@@ -101,8 +110,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/fire-pit.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>30&quot; x 30&quot; x 16&quot; H</td></tr><tr><th>Steel</th><td>3/16&quot; plate (about 3x thicker than store pits)</td></tr><tr><th>Fire area</th><td>27&quot; x 27&quot;</td></tr><tr><th>Assembly</th><td>4 panels, no tools</td></tr><tr><th>Custom</th><td>family name or house number cutout, +$60</td></tr><tr><th>Weight</th><td>about 81 lb</td></tr></table>
       <p class="note">Custom name panel +$60. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Pine &amp; Moon Fire Pit">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Pine &amp; Moon Fire Pit">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="fire-pit">Spin it in 3D</button></div>
   </div>
+  <div class="gal"><img src="img/fire-pit-backyard.jpg" alt="" loading="lazy" width="540" height="540"><img src="img/fire-pit-custom.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/FP-30-build-guide.pdf">Build guide (PDF)</a> · <a href="files/FP-30-laser-dxf.zip">Laser files (DXF, zip)</a> · 2 laser parts, 4 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Laser: 4 panels from 3/16&quot; plate</li><li>Deburr every edge</li><li>Dry fit: slot together</li><li>Optional high-heat paint</li><li>Pack flat</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>3/16&quot; steel: won&#x27;t warp or burn through like thin store pits</li><li>No tools, no bolts: slots together in 1 minute</li><li>Packs flat for camping</li><li>Glowing pine-forest, moon and star cutouts</li><li>Add your family name (custom panel)</li></ul></div>
@@ -117,8 +129,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/fire-pit-grill.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>24&quot; x 24&quot; firebox, 30&quot; tall</td></tr><tr><th>Grate</th><td>23&quot; square, 2 heights</td></tr><tr><th>Steel</th><td>11 ga box, 3/16&quot; angle legs</td></tr><tr><th>Shelf</th><td>24&quot; x 24&quot; wood shelf</td></tr><tr><th>Fuel</th><td>wood or charcoal</td></tr><tr><th>Weight</th><td>about 98 lb</td></tr></table>
       <p class="note">Delivered within 25 miles of Poughkeepsie. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Backyard Fire Pit Grill">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Backyard Fire Pit Grill">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="fire-pit-grill">Spin it in 3D</button></div>
   </div>
+  <div class="gal"><img src="img/fire-pit-grill-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/FG-28-build-guide.pdf">Build guide (PDF)</a> · <a href="files/FG-28-laser-dxf.zip">Laser files (DXF, zip)</a> · 3 laser parts, 9 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Laser: U-wrap, end panels, shelf</li><li>Press brake: 2 straight bends</li><li>Saw: legs, clips, grate frame</li><li>MIG: corners, legs, shelf, clips, grate</li><li>High-heat paint + test fire</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>Grilling height (30&quot;) with a fire you can still sit around</li><li>Grate at 2 heights: sear or slow-cook</li><li>Ash holes + side air holes: burns clean, drains rain</li><li>Wood shelf underneath</li><li>Heavy 11 ga firebox with lift handles</li></ul></div>
@@ -133,8 +148,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/outdoor-fireplace.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>53&quot; wide x 30&quot; tall x 22&quot; deep</td></tr><tr><th>Steel</th><td>11 ga body, 3/16&quot; stands</td></tr><tr><th>Grate</th><td>30&quot; x 14&quot;, 3/8&quot; bars</td></tr><tr><th>Use</th><td>on dirt, gravel or pavers</td></tr><tr><th>Pairs with</th><td>Fire Pit for a full setup</td></tr><tr><th>Weight</th><td>about 84 lb</td></tr></table>
       <p class="note">Delivered within 25 miles of Poughkeepsie. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Pine Ridge Outdoor Fireplace">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Pine Ridge Outdoor Fireplace">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="outdoor-fireplace">Spin it in 3D</button></div>
   </div>
+  <div class="gal"><img src="img/outdoor-fireplace-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/OF-36-build-guide.pdf">Build guide (PDF)</a> · <a href="files/OF-36-laser-dxf.zip">Laser files (DXF, zip)</a> · 3 laser parts, 6 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Laser: fire back blank, stands, grate sides</li><li>Press brake: two 45° bends</li><li>MIG: kickstands, log grate</li><li>High-heat paint + test fire</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>Throws heat toward you, blocks wind and smoke drift</li><li>Pine ridge and moon glow at night</li><li>Heavy log grate keeps the fire breathing</li><li>Stands on its own, no anchoring</li><li>Great backdrop for photos and parties</li></ul></div>
@@ -149,8 +167,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/firewood-rack.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>48&quot; L x 16&quot; D x 46&quot; H</td></tr><tr><th>Holds</th><td>about 0.4 face cord (45&quot; x 41&quot; of 16&quot; logs)</td></tr><tr><th>Steel</th><td>1-1/2&quot; x 14 ga tube, welded</td></tr><tr><th>Finish</th><td>powder coat (any color)</td></tr><tr><th>Options</th><td>8 ft length, roof, custom size</td></tr><tr><th>Weight</th><td>about 70 lb</td></tr></table>
       <p class="note">8 ft: $349 · roof +$90 · delivered and placed. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Heavy Log Rack">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Heavy Log Rack">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="firewood-rack">Spin it in 3D</button></div>
   </div>
+  
+  <div class="shop"><b>For the shop</b> <a href="files/WR-4-build-guide.pdf">Build guide (PDF)</a> · <a href="files/WR-4-laser-dxf.zip">Laser files (DXF, zip)</a> · 2 laser parts, 6 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Saw: 13 tube pieces</li><li>Laser: feet and caps</li><li>MIG on a fixture table</li><li>Powder coat</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>Welded heavy tube: no wobbly bolt-together kit</li><li>Holds about 0.4 face cord off the wet ground</li><li>Kindling deck on top</li><li>Capped tops and weep holes: no rust or freeze splits from the inside</li><li>Custom sizes for your porch or garage, local delivery</li></ul></div>
@@ -165,8 +186,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/log-holder.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>24-3/8&quot; L x 16&quot; W x 15&quot; H</td></tr><tr><th>Steel</th><td>3/16&quot; plate ends, 1/2&quot; bar rails</td></tr><tr><th>Holds</th><td>about 15–20 split logs</td></tr><tr><th>Finish</th><td>powder coat</td></tr><tr><th>Custom</th><td>initials laser-etched on an end, +$30</td></tr><tr><th>Weight</th><td>about 27 lb</td></tr></table>
       <p class="note">Custom initials +$30. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Hearth Log Holder">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Hearth Log Holder">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="log-holder">Spin it in 3D</button></div>
   </div>
+  
+  <div class="shop"><b>For the shop</b> <a href="files/LH-1-build-guide.pdf">Build guide (PDF)</a> · <a href="files/LH-1-laser-dxf.zip">Laser files (DXF, zip)</a> · 1 laser parts, 4 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Laser: 2 end plates with locating holes</li><li>Saw: 4 rails</li><li>MIG: rails through the holes, ground flush</li><li>Powder coat</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>Solid 3/16&quot; steel ends with a built-in carry slot</li><li>Holds a couple of nights of wood</li><li>Felt feet for indoor floors</li><li>Custom etched initials make it a gift</li><li>Carry it to the fireplace by the end slots</li></ul></div>
@@ -181,8 +205,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/griddle.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Cooktop</th><td>36&quot; x 22&quot;, 1/4&quot; seasoned steel</td></tr><tr><th>Body, lid, legs</th><td>304 stainless (no rust)</td></tr><tr><th>Height</th><td>33-1/4&quot; to the cooktop</td></tr><tr><th>Fuel</th><td>wood, or propane (gas version)</td></tr><tr><th>Cover</th><td>hinged stainless lid</td></tr><tr><th>Weight</th><td>about 142 lb</td></tr></table>
       <p class="note">Wood-fired $599 · propane $799 · all-carbon-steel wood version $349. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Stainless Flat-Top Griddle">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Stainless Flat-Top Griddle">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="griddle">Spin it in 3D</button></div>
   </div>
+  <div class="gal"><img src="img/griddle-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/GR-36-build-guide.pdf">Build guide (PDF)</a> · <a href="files/GR-36-laser-dxf.zip">Laser files (DXF, zip)</a> · 7 laser parts, 5 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Laser: cooktop + stainless body parts</li><li>Press brake: firebox + lid</li><li>MIG/TIG stainless: box, legs, shelf</li><li>Hinges, guards, (gas: certified burner kit + leak test)</li><li>Season the cooktop + test cook</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>Stainless body, lid and legs: no rust</li><li>Heavy 1/4&quot; cooktop: even heat, seasons non-stick like cast iron</li><li>Wood-fired: no propane to buy; or propane with a certified burner kit</li><li>Hinged lid keeps rain and leaves off</li><li>Removable cooktop for cleaning, grease cup, storage shelf</li></ul></div>
@@ -197,8 +224,11 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
     <div><img class="render" src="img/fireplace-grate.png" alt="" loading="lazy" width="1000" height="750">
       <table class="specs"><tr><th>Size</th><td>22&quot; W x 14&quot; D x 7&quot; H at the back</td></tr><tr><th>Bars</th><td>6 x 1&quot; solid square steel</td></tr><tr><th>Supports</th><td>3 x 1/2&quot; plate</td></tr><tr><th>Fits</th><td>fireplaces 26&quot;+ wide at the back (18&quot; and 26&quot; on request)</td></tr><tr><th>Finish</th><td>bare or 2000 °F black</td></tr><tr><th>Weight</th><td>about 61 lb</td></tr></table>
       <p class="note">18&quot; $189 · 26&quot; $269. Made to order: about 1–2 weeks.</p>
-      <a class="btn" href="#order" data-product="Heavy-Duty Fireplace Grate">Order or ask about this one</a></div>
+      <a class="btn" href="#order" data-product="Heavy-Duty Fireplace Grate">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="fireplace-grate">Spin it in 3D</button></div>
   </div>
+  
+  <div class="shop"><b>For the shop</b> <a href="files/HG-22-build-guide.pdf">Build guide (PDF)</a> · <a href="files/HG-22-laser-dxf.zip">Laser files (DXF, zip)</a> · 1 laser parts, 3 build steps</div>
   <div class="grid2">
     <div><h3>How we make it</h3><ol class="steps"><li>Laser: 3 supports from 1/2&quot; plate</li><li>Saw: 6 solid 1&quot; bars</li><li>MIG: full fillets</li><li>Bare or 2000 °F paint</li></ol></div>
     <div><h3>Why it's built this way</h3><ul class="feats"><li>1&quot; solid bars: won&#x27;t sag or melt like thin store grates</li><li>Center support: no bar spans more than 10&quot;</li><li>Back rises 2&quot; so logs roll in toward the fire</li><li>Legs lift the fire for airflow and easy ash cleanup</li><li>Made in our machine shop, sized to your fireplace on request</li></ul></div>
@@ -230,6 +260,36 @@ heavy plate, not the thin stuff from the big stores. The log racks and log holde
 <p class="note">Fire products are for outdoor use on dirt, gravel or pavers, 10 ft from buildings. Never on a wooden deck. Steel gets very hot.</p>
 </main>
 <footer>Technical Precision Corp. · 22 Commerce St, Poughkeepsie, NY · <a href="tel:+18454730548">(845) 473-0548</a> · <a href="https://tepco.us.com/">Machine shop home</a></footer>
+<dialog id="v"><div class="bar"><span id="vt">3D model</span><span>drag to spin · pinch or scroll to zoom</span><button class="btn" type="button" onclick="this.closest('dialog').close()">Close</button></div><canvas id="vc"></canvas></dialog>
+<script type="importmap">{"imports":{"three":"./js/three.module.min.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { STLLoader } from './js/STLLoader.js';
+import { OrbitControls } from './js/OrbitControls.js';
+const dlg = document.getElementById('v'), cv = document.getElementById('vc');
+let r, sc, cam, ctl, mesh;
+function init() {
+  r = new THREE.WebGLRenderer({ canvas: cv, antialias: true }); r.setClearColor(0x0f3b7c);
+  sc = new THREE.Scene(); sc.add(new THREE.HemisphereLight(0xeaf2ff, 0x203050, 1.6));
+  const d = new THREE.DirectionalLight(0xffffff, 2.2); d.position.set(1, 2, 1.5); sc.add(d);
+  const grid = new THREE.GridHelper(200, 50, 0x5f86c4, 0x2a548f); sc.add(grid);
+  cam = new THREE.PerspectiveCamera(35, 1, 0.5, 5000); ctl = new OrbitControls(cam, cv); ctl.enableDamping = true;
+  (function loop() { requestAnimationFrame(loop); if (dlg.open) { ctl.update(); r.render(sc, cam); } })();
+}
+document.querySelectorAll('[data-stl]').forEach(b => b.addEventListener('click', () => {
+  if (!r) init();
+  dlg.showModal(); document.getElementById('vt').textContent = b.closest('section').querySelector('h2').firstChild.textContent.trim() + ' · 3D';
+  const w = cv.clientWidth, h = cv.clientHeight; r.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
+  new STLLoader().load('stl/' + b.dataset.stl + '.stl', g => {
+    if (mesh) sc.remove(mesh);
+    g.rotateX(-Math.PI / 2); g.scale(1, 1, -1); g.computeVertexNormals(); g.computeBoundingBox();
+    const bb = g.boundingBox, c = new THREE.Vector3(); bb.getCenter(c); g.translate(-c.x, -bb.min.y, -c.z);
+    mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: 0x9aa3ad, metalness: .35, roughness: .5, side: THREE.DoubleSide })); sc.add(mesh);
+    const size = bb.getSize(new THREE.Vector3()).length();
+    const k = cam.aspect < 1 ? 1.25 / cam.aspect * .9 : .9; cam.position.set(size * k, size * .6 * k / .9, size * k); ctl.target.set(0, (bb.max.y - bb.min.y) / 2, 0); ctl.update();
+  });
+}));
+</script>
 <script>
 document.querySelectorAll('[data-product]').forEach(a => a.addEventListener('click', () => {
   const s = document.querySelector('select[name=product]'); [...s.options].forEach(o => { if (o.text.startsWith(a.dataset.product)) s.value = o.value; });
