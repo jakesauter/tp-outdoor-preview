@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Motocross &amp; BMX starting gates | Technical Precision Corp.</title>
+<meta name="description" content="Professional, industrial-grade motocross and BMX starting gates for race tracks and backyards. Bolt-together steel modules made by Technical Precision in Poughkeepsie, NY.">
+<meta name="theme-color" content="#0f3b7c">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Motocross &amp; BMX starting gates, made in Poughkeepsie">
+<meta property="og:image" content="https://tepco.us.com/gates/img/mx-gate.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: "Barlow"; src: url(../fonts/barlow-400-latin.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url(../fonts/barlow-600-latin.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url(../fonts/barlow-condensed-700-latin.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+:root { --bp: #0f3b7c; --ink: #071c40; --line: #eaf2ff; --muted: #b3caec; --frame: rgba(234,242,255,.3); --red: #ff9a82; --cyan: #80d8ff;
+  --g: clamp(16px, 4vw, 56px); color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bp); color: var(--line); font: 17px/1.55 "Barlow", system-ui, sans-serif;
+  background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 24px 24px; }
+a { color: var(--cyan); }
+.top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 14px; padding: 10px var(--g); background: rgba(11,47,102,.92);
+  border-bottom: 1px solid var(--frame); backdrop-filter: blur(6px); }
+.top a.home { color: var(--line); text-decoration: none; font: 700 20px "Barlow Condensed", sans-serif; letter-spacing: .5px; }
+.lines { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; } .lines a { color: var(--line); text-decoration: none; border: 1px solid var(--frame); border-radius: 999px; padding: 6px 14px; font-weight: 600; } .lines a.on { background: var(--line); color: #0b2f66; }
+.top .sp { flex: 1; } .top .ph { color: var(--muted); text-decoration: none; }
+.btn { display: inline-block; background: var(--red); color: var(--ink); font-weight: 600; text-decoration: none; padding: 11px 18px; border-radius: 4px; border: 0; font-size: 16px; cursor: pointer; }
+main { max-width: 1180px; margin: 0 auto; padding: 0 var(--g) 60px; }
+h1, h2, h3 { font-family: "Barlow Condensed", sans-serif; font-weight: 700; letter-spacing: .3px; line-height: 1.05; }
+h1 { font-size: clamp(42px, 8vw, 84px); margin: 46px 0 10px; }
+h2 { font-size: clamp(32px, 5vw, 50px); margin: 4px 0 8px; } h2 .price { color: var(--red); font-size: .7em; margin-left: 8px; }
+h3 { font-size: 26px; margin: 18px 0 6px; }
+.eyebrow { color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-size: 13px; margin: 0; }
+.lede { color: var(--muted); font-size: 19px; max-width: 760px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 26px 0 10px; }
+.card { display: flex; flex-direction: column; gap: 4px; background: rgba(7,28,64,.55); border: 1px solid var(--frame); border-radius: 6px; padding: 10px 12px 14px;
+  color: var(--line); text-decoration: none; }
+.card img { width: 100%; height: auto; border-radius: 4px; background: #f6f6f6; margin-bottom: 6px; }
+.card .kind { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; } .card b { font: 700 24px "Barlow Condensed", sans-serif; }
+.card .price { color: var(--red); font-weight: 600; font-size: 19px; margin-top: auto; }
+.prod { border-top: 1px dashed var(--frame); padding: 40px 0 10px; scroll-margin-top: 60px; }
+.grid2 { display: grid; grid-template-columns: 1.25fr 1fr; gap: 26px; align-items: start; }
+.dwg { margin: 0; border: 1px solid var(--frame); border-radius: 4px; overflow: hidden; } .dwg img { display: block; width: 100%; height: auto; }
+.dwg figcaption { color: var(--muted); font-size: 13px; padding: 6px 10px; }
+.render { width: 100%; height: auto; border-radius: 4px; background: #f6f6f6; }
+.specs { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15.5px; }
+.specs th { text-align: left; color: var(--muted); font-weight: 400; padding: 5px 10px 5px 0; vertical-align: top; width: 34%; }
+.specs td { padding: 5px 0; border-bottom: 1px solid var(--frame); }
+.note { color: var(--muted); font-size: 14.5px; }
+.steps, .feats { padding-left: 20px; } .steps li, .feats li { margin: 5px 0; }
+.wood { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.wood div { border: 1px solid var(--frame); border-radius: 6px; padding: 14px; background: rgba(7,28,64,.45); }
+.wood b { font: 700 22px "Barlow Condensed", sans-serif; display: block; }
+form { display: grid; gap: 12px; max-width: 720px; } label { display: grid; gap: 4px; color: var(--muted); font-size: 15px; }
+input, select, textarea { font: inherit; color: var(--line); background: rgba(7,28,64,.7); border: 1px solid var(--frame); border-radius: 4px; padding: 10px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } .honey { position: absolute; left: -9999px; }
+.msg { min-height: 22px; }
+.btn.ghost { background: transparent; color: var(--line); border: 1px solid var(--frame); margin-left: 6px; }
+.gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 14px 0; } .gal img { width: 100%; height: auto; border-radius: 6px; }
+.shop { border: 1px dashed var(--frame); border-radius: 6px; padding: 10px 14px; margin: 10px 0; color: var(--muted); } .shop b { color: var(--line); margin-right: 8px; }
+dialog { border: 1px solid var(--frame); background: #0b2f66; color: var(--line); padding: 0; width: min(900px, 96vw); border-radius: 8px; }
+dialog::backdrop { background: rgba(0,0,0,.6); } dialog canvas { display: block; width: 100%; height: min(70vh, 640px); }
+dialog .bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; color: var(--muted); font-size: 14px; } footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--frame); padding: 20px var(--g); text-align: center; }
+@media (max-width: 760px) { .grid2, .row { grid-template-columns: 1fr; } .top .ph { display: none; } }
+</style></head>
+<body>
+<div style="background:#ff9a82;color:#071c40;text-align:center;font-weight:600;padding:6px 12px">PREVIEW for Technical Precision: not public yet</div>
+<header class="top"><a class="home" href="https://tepco.us.com/">TECHNICAL PRECISION</a><span class="sp"></span><a class="ph" href="tel:+18454730548">(845) 473-0548</a>
+<a class="btn" href="#order">Order</a></header>
+<main>
+<nav class="lines"><a href="../outdoor/">Fire &amp; cooking</a><a href="../gates/" class="on" aria-current="page">Starting gates</a></nav>
+<p class="eyebrow" style="margin-top:22px">New · Starting gates</p>
+<h1>Starting gates for<br>motocross and BMX.</h1>
+<p class="lede">Industrial-grade starting gates for race tracks and backyards, built by a machine shop whose family has raced motocross for years. Every gate is its own module: bolt 2 together for the backyard or 40 for a race line, with the starter's center box in the middle. No welding at the track. We deliver and set up in the shop truck.</p>
+<div class="cards"><a class="card" href="#mx-gate"><img src="img/mx-gate.png" alt="Motocross Starting Gate Module" loading="lazy" width="1000" height="750">
+<span class="kind">Motocross · MX-40</span><b>Motocross Starting Gate Module</b><span>One rider&#x27;s gate. Bolt as many together as the track needs.</span><span class="price">$449</span></a><a class="card" href="#mx-center-box"><img src="img/mx-center-box.png" alt="Motocross Starter&#x27;s Center Box" loading="lazy" width="1000" height="750">
+<span class="kind">Motocross · MX-C</span><b>Motocross Starter&#x27;s Center Box</b><span>One foot pedal drops every gate on the line.</span><span class="price">$899</span></a><a class="card" href="#bmx-gate"><img src="img/bmx-gate.png" alt="BMX Starting Gate" loading="lazy" width="1000" height="750">
+<span class="kind">BMX · BG-80</span><b>BMX Starting Gate</b><span>A two-lane BMX gate. Bolt four together for a full 8-lane track.</span><span class="price">$899</span></a></div>
+
+<section class="prod" id="mx-gate">
+  <p class="eyebrow">Sheet 01 · Motocross · DWG TP-MX-40-100</p>
+  <h2>Motocross Starting Gate Module <span class="price">$449</span></h2>
+  <p class="lede">A heavy steel starting gate for one rider, 40&quot; wide. Modules bolt to each other and to the center box with four bolts, so a 2-gate backyard start and a 40-gate race line are the same parts. One release rod drops every gate at the same instant.</p>
+  <div class="grid2">
+    <figure class="dwg"><img src="dwg/mx-gate.svg" alt="Dimensioned drawing of the Motocross Starting Gate Module" loading="lazy"><figcaption>Front, right and top views, inches. Original Technical Precision design.</figcaption></figure>
+    <div><img class="render" src="img/mx-gate.png" alt="" loading="lazy" width="1000" height="750">
+      <table class="specs"><tr><th>Module</th><td>40&quot; wide (one rider), 27&quot; deep; 36&quot; or 42&quot; spacing on request</td></tr><tr><th>Gate</th><td>33&quot; x 20-1/2&quot;, 1-1/2&quot; x 11 ga steel tube</td></tr><tr><th>Base</th><td>2&quot; x 11 ga tube ladder, bolt-together ends</td></tr><tr><th>Drop</th><td>toward the rider, springs + gravity</td></tr><tr><th>Install</th><td>bolts and anchors only, no welding on site</td></tr><tr><th>Finish</th><td>powder coat, yellow gate</td></tr><tr><th>Weight</th><td>about 76 lb</td></tr></table>
+      <p class="note">Per module · 10+ modules $399 each · backyard 2-gate set with hand release $1,049. Made to order: about 1–2 weeks.</p>
+      <a class="btn" href="#order" data-product="Motocross Starting Gate Module">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="mx-gate">Spin it in 3D</button></div>
+  </div>
+  <div class="gal"><img src="img/mx-gate-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/MX-40-build-guide.pdf">Build guide (PDF)</a> · <a href="files/MX-40-laser-dxf.zip">Laser files (DXF, zip)</a> · 6 laser parts, 6 build steps</div>
+  <div class="grid2">
+    <div><h3>How we make it</h3><ol class="steps"><li>Saw + laser: one kit per module</li><li>Base welded on a fixture so every module bolts to the next</li><li>Gate frame, hinge ears and latch</li><li>Powder coat, springs, drop-tested 20 times</li></ol></div>
+    <div><h3>Why it's built this way</h3><ul class="feats"><li>Bolt-together modules: 1 gate or 40, no welding at the track</li><li>One release rod: every gate drops at the same instant</li><li>Heavy 11 ga tube and 1/4&quot; plate: built for years of race days</li><li>Spring-driven drop: fast and the same every time</li><li>Anchors to a concrete pad or stakes into dirt</li></ul></div>
+  </div>
+</section>
+<section class="prod" id="mx-center-box">
+  <p class="eyebrow">Sheet 02 · Motocross · DWG TP-MX-C-100</p>
+  <h2>Motocross Starter&#x27;s Center Box <span class="price">$899</span></h2>
+  <p class="lede">The starter&#x27;s box goes in the middle of the line: gate modules bolt to both sides and their release rods splice to it. Step on the pedal and every gate drops at the same instant. A lock pin stops it while riders line up; one person resets the line.</p>
+  <div class="grid2">
+    <figure class="dwg"><img src="dwg/mx-center-box.svg" alt="Dimensioned drawing of the Motocross Starter&#x27;s Center Box" loading="lazy"><figcaption>Front, right and top views, inches. Original Technical Precision design.</figcaption></figure>
+    <div><img class="render" src="img/mx-center-box.png" alt="" loading="lazy" width="1000" height="750">
+      <table class="specs"><tr><th>Size</th><td>40&quot; wide (one gate slot), 27&quot; deep</td></tr><tr><th>Release</th><td>foot pedal, bell crank, spring return</td></tr><tr><th>Safety</th><td>lock pin + reset hold-down</td></tr><tr><th>Install</th><td>bolts between gate modules</td></tr><tr><th>Finish</th><td>powder coat</td></tr><tr><th>Weight</th><td>about 103 lb</td></tr></table>
+      <p class="note">With a line of 10+ modules: $799 · hand-lever version for backyard sets included in the 2-gate set. Made to order: about 1–2 weeks.</p>
+      <a class="btn" href="#order" data-product="Motocross Starter&#x27;s Center Box">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="mx-center-box">Spin it in 3D</button></div>
+  </div>
+  <div class="gal"><img src="img/mx-center-box-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/MX-C-build-guide.pdf">Build guide (PDF)</a> · <a href="files/MX-C-laser-dxf.zip">Laser files (DXF, zip)</a> · 7 laser parts, 4 build steps</div>
+  <div class="grid2">
+    <div><h3>How we make it</h3><ol class="steps"><li>Same base as the gate modules</li><li>Bell crank and foot pedal on a post</li><li>Lock pin and reset hook</li><li>Line-tested with 4 gates before delivery</li></ol></div>
+    <div><h3>Why it's built this way</h3><ul class="feats"><li>Every gate drops at the same instant: one rod, one pedal</li><li>Lock pin: the line can&#x27;t drop while riders line up</li><li>One person resets 40 gates with the hold-down hook</li><li>Same bolt pattern as the gate modules</li></ul></div>
+  </div>
+</section>
+<section class="prod" id="bmx-gate">
+  <p class="eyebrow">Sheet 03 · BMX · DWG TP-BG-80-100</p>
+  <h2>BMX Starting Gate <span class="price">$899</span></h2>
+  <p class="lede">A solid-face BMX gate for two riders: they lean their front wheels on it, and it drops away from them down the start hill. Hand release for backyard tracks. For a sanctioned 8-lane track, four sections bolt into one gate and a bought-in, approved pneumatic start system drives it.</p>
+  <div class="grid2">
+    <figure class="dwg"><img src="dwg/bmx-gate.svg" alt="Dimensioned drawing of the BMX Starting Gate" loading="lazy"><figcaption>Front, right and top views, inches. Original Technical Precision design.</figcaption></figure>
+    <div><img class="render" src="img/bmx-gate.png" alt="" loading="lazy" width="1000" height="750">
+      <table class="specs"><tr><th>Size</th><td>80&quot; wide (2 lanes) x 27&quot; deep</td></tr><tr><th>Gate</th><td>77&quot; x 21&quot;, solid 14 ga face on 1-1/2&quot; x 11 ga tube</td></tr><tr><th>Drop</th><td>away from the riders, gas springs</td></tr><tr><th>Release</th><td>hand lever (backyard) or bought-in pneumatic system (tracks)</td></tr><tr><th>Install</th><td>bolts to a level start deck or pad</td></tr><tr><th>Finish</th><td>powder coat, yellow gate</td></tr><tr><th>Weight</th><td>about 154 lb</td></tr></table>
+      <p class="note">Backyard 2-lane gate · 8-lane track gate (4 sections, steel only) $3,200, start system extra. Made to order: about 1–2 weeks.</p>
+      <a class="btn" href="#order" data-product="BMX Starting Gate">Order or ask about this one</a>
+      <button class="btn ghost" type="button" data-stl="bmx-gate">Spin it in 3D</button></div>
+  </div>
+  <div class="gal"><img src="img/bmx-gate-backyard.jpg" alt="" loading="lazy" width="540" height="540"><p class="note">Illustrations of our design. Real photos after the first one is built.</p></div>
+  <div class="shop"><b>For the shop</b> <a href="files/BG-80-build-guide.pdf">Build guide (PDF)</a> · <a href="files/BG-80-laser-dxf.zip">Laser files (DXF, zip)</a> · 7 laser parts, 5 build steps</div>
+  <div class="grid2">
+    <div><h3>How we make it</h3><ol class="steps"><li>Saw + laser kit</li><li>Base welded on the same fixture as the motocross modules</li><li>Gate frame with a solid face</li><li>Latch, release rod, gas springs, 20 drop tests</li></ol></div>
+    <div><h3>Why it's built this way</h3><ul class="feats"><li>Solid face: riders lean their wheels on it</li><li>Drops away from the riders with gas springs</li><li>Hand release for backyard tracks; a full 8-lane gate from 4 sections</li><li>Bolts to the start deck: no welding on site</li><li>Same tough base as our motocross gates</li></ul></div>
+  </div>
+</section>
+<section class="prod" id="order">
+  <p class="eyebrow">Sheet 04 · Order</p><h2>Order or ask a question</h2>
+  <p class="lede">Tell us what you'd like. We'll reply with the price, the timing and the delivery, usually the same day. Nothing is charged until it's built.</p>
+  <form id="f" autocomplete="on">
+    <div class="row"><label>Name *<input name="name" required autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+    <label>Email<input name="email" type="email" autocomplete="email"></label>
+    <label>Product<select name="product"><option>Motocross Starting Gate Module ($449)</option><option>Motocross Starter&#x27;s Center Box ($899)</option><option>BMX Starting Gate ($899)</option><option>Something else</option></select></label>
+    <label>Options or custom size<input name="options" placeholder="e.g. 20 gates + center box · 36&quot; spacing · concrete pad"></label>
+    <label>Delivery town<input name="town" placeholder="Poughkeepsie, Wappingers Falls, Hyde Park…"></label>
+    <label>Anything else<textarea name="message" rows="3"></textarea></label>
+    <label class="honey" aria-hidden="true">Leave empty<input name="_honey" tabindex="-1" autocomplete="off"></label>
+    <div><button class="btn" type="submit">Send</button></div><div class="msg" id="m" role="status"></div>
+  </form>
+</section>
+<p class="note">Starting gates are racing equipment: pinch points when armed. Use the lock pin while riders line up and keep everyone out of the gates' path.</p>
+</main>
+<footer>Technical Precision Corp. · 22 Commerce St, Poughkeepsie, NY · <a href="tel:+18454730548">(845) 473-0548</a> · <a href="https://tepco.us.com/">Machine shop home</a></footer>
+<dialog id="v"><div class="bar"><span id="vt">3D model</span><span>drag to spin · pinch or scroll to zoom</span><button class="btn" type="button" onclick="this.closest('dialog').close()">Close</button></div><canvas id="vc"></canvas></dialog>
+<script type="importmap">{"imports":{"three":"./js/three.module.min.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { STLLoader } from './js/STLLoader.js';
+import { OrbitControls } from './js/OrbitControls.js';
+const dlg = document.getElementById('v'), cv = document.getElementById('vc');
+let r, sc, cam, ctl, mesh;
+function init() {
+  r = new THREE.WebGLRenderer({ canvas: cv, antialias: true }); r.setClearColor(0x0f3b7c);
+  sc = new THREE.Scene(); sc.add(new THREE.HemisphereLight(0xeaf2ff, 0x203050, 1.6));
+  const d = new THREE.DirectionalLight(0xffffff, 2.2); d.position.set(1, 2, 1.5); sc.add(d);
+  const grid = new THREE.GridHelper(200, 50, 0x5f86c4, 0x2a548f); sc.add(grid);
+  cam = new THREE.PerspectiveCamera(35, 1, 0.5, 5000); ctl = new OrbitControls(cam, cv); ctl.enableDamping = true;
+  (function loop() { requestAnimationFrame(loop); if (dlg.open) { ctl.update(); r.render(sc, cam); } })();
+}
+document.querySelectorAll('[data-stl]').forEach(b => b.addEventListener('click', () => {
+  if (!r) init();
+  dlg.showModal(); document.getElementById('vt').textContent = b.closest('section').querySelector('h2').firstChild.textContent.trim() + ' · 3D';
+  const w = cv.clientWidth, h = cv.clientHeight; r.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
+  new STLLoader().load('stl/' + b.dataset.stl + '.stl', g => {
+    if (mesh) sc.remove(mesh);
+    g.rotateX(-Math.PI / 2); g.scale(1, 1, -1); g.computeVertexNormals(); g.computeBoundingBox();
+    const bb = g.boundingBox, c = new THREE.Vector3(); bb.getCenter(c); g.translate(-c.x, -bb.min.y, -c.z);
+    mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: 0x9aa3ad, metalness: .35, roughness: .5, side: THREE.DoubleSide })); sc.add(mesh);
+    const size = bb.getSize(new THREE.Vector3()).length();
+    const k = cam.aspect < 1 ? 1.25 / cam.aspect * .9 : .9; cam.position.set(size * k, size * .6 * k / .9, size * k); ctl.target.set(0, (bb.max.y - bb.min.y) / 2, 0); ctl.update();
+  });
+}));
+</script>
+<script>
+document.querySelectorAll('[data-product]').forEach(a => a.addEventListener('click', () => {
+  const s = document.querySelector('select[name=product]'); [...s.options].forEach(o => { if (o.text.startsWith(a.dataset.product)) s.value = o.value; });
+}));
+document.getElementById('f').addEventListener('submit', async e => {
+  e.preventDefault(); const m = document.getElementById('m'), f = e.target, b = f.querySelector('button');
+  const d = Object.fromEntries(new FormData(f)); d._replyto = d.email || ''; d._subject = 'Starting gate order: ' + d.product + ' (' + d.name + ')';
+  b.disabled = true; m.textContent = 'Sending…';
+  try {
+    const r = await fetch('https://site-forms.jake-sauter3.workers.dev/send?site=tepco', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) });
+    const j = await r.json(); if (!j.success) throw 0;
+    m.textContent = 'Thanks! We got it and will call or email you soon.'; f.reset();
+  } catch (_) { m.textContent = 'That did not go through. Please call (845) 473-0548.'; }
+  b.disabled = false;
+});
+</script>
+</body></html>

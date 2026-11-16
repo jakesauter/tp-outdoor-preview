@@ -23,6 +23,7 @@ a { color: var(--cyan); }
 .top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 14px; padding: 10px var(--g); background: rgba(11,47,102,.92);
   border-bottom: 1px solid var(--frame); backdrop-filter: blur(6px); }
 .top a.home { color: var(--line); text-decoration: none; font: 700 20px "Barlow Condensed", sans-serif; letter-spacing: .5px; }
+.lines { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; } .lines a { color: var(--line); text-decoration: none; border: 1px solid var(--frame); border-radius: 999px; padding: 6px 14px; font-weight: 600; } .lines a.on { background: var(--line); color: #0b2f66; }
 .top .sp { flex: 1; } .top .ph { color: var(--muted); text-decoration: none; }
 .btn { display: inline-block; background: var(--red); color: var(--ink); font-weight: 600; text-decoration: none; padding: 11px 18px; border-radius: 4px; border: 0; font-size: 16px; cursor: pointer; }
 main { max-width: 1180px; margin: 0 auto; padding: 0 var(--g) 60px; }
@@ -68,7 +69,8 @@ dialog .bar { display: flex; justify-content: space-between; align-items: center
 <header class="top"><a class="home" href="https://tepco.us.com/">TECHNICAL PRECISION</a><span class="sp"></span><a class="ph" href="tel:+18454730548">(845) 473-0548</a>
 <a class="btn" href="#order">Order</a></header>
 <main>
-<p class="eyebrow" style="margin-top:34px">New · Fire &amp; cooking</p>
+<nav class="lines"><a href="../outdoor/" class="on" aria-current="page">Fire &amp; cooking</a><a href="../gates/">Starting gates</a></nav>
+<p class="eyebrow" style="margin-top:22px">New · Fire &amp; cooking</p>
 <h1>Steel for the fire,<br>made in Poughkeepsie.</h1>
 <p class="lede">Fire pits, a rocket stove, a fire pit grill, a griddle, an outdoor fireplace and a heavy grate for the indoor fireplace, cut on our laser and welded in our shop from
 heavy plate, not the thin stuff from the big stores. Every piece is made to order. We deliver around Poughkeepsie in the shop truck.</p>
@@ -201,7 +203,7 @@ heavy plate, not the thin stuff from the big stores. Every piece is made to orde
     <div class="row"><label>Name *<input name="name" required autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
     <label>Email<input name="email" type="email" autocomplete="email"></label>
     <label>Product<select name="product"><option>TP Rocket Stove ($169)</option><option>Pine &amp; Moon Fire Pit ($299)</option><option>Backyard Fire Pit Grill ($449)</option><option>Pine Ridge Outdoor Fireplace ($399)</option><option>Stainless Flat-Top Griddle ($599)</option><option>Heavy-Duty Fireplace Grate ($229)</option><option>Something else</option></select></label>
-    <label>Options or custom size<input name="options" placeholder="e.g. family name on the fire pit · 26" grate"></label>
+    <label>Options or custom size<input name="options" placeholder="e.g. family name on the fire pit · 26&quot; grate"></label>
     <label>Delivery town<input name="town" placeholder="Poughkeepsie, Wappingers Falls, Hyde Park…"></label>
     <label>Anything else<textarea name="message" rows="3"></textarea></label>
     <label class="honey" aria-hidden="true">Leave empty<input name="_honey" tabindex="-1" autocomplete="off"></label>
