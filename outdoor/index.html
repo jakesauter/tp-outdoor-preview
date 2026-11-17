@@ -62,7 +62,17 @@ input, select, textarea { font: inherit; color: var(--line); background: rgba(7,
 dialog { border: 1px solid var(--frame); background: #0b2f66; color: var(--line); padding: 0; width: min(900px, 96vw); border-radius: 8px; }
 dialog::backdrop { background: rgba(0,0,0,.6); } dialog canvas { display: block; width: 100%; height: min(70vh, 640px); }
 dialog .bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; color: var(--muted); font-size: 14px; } footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--frame); padding: 20px var(--g); text-align: center; }
-@media (max-width: 760px) { .grid2, .row { grid-template-columns: 1fr; } .top .ph { display: none; } }
+.hero { position: relative; margin: 18px calc(-1 * var(--g)) 0; overflow: hidden; } .hero img { display: block; width: 100%; height: clamp(300px, 52vw, 560px); object-fit: cover; object-position: 50% 60%; }
+.hero .txt { position: absolute; inset: 0; padding: clamp(18px, 4vw, 48px) var(--g); background: linear-gradient(90deg, rgba(7,28,64,.85) 0%, rgba(7,28,64,.6) 38%, rgba(7,28,64,0) 62%); }
+.hero h1 { margin: 0 0 10px; text-shadow: 0 2px 14px rgba(0,0,0,.4); } .hero .lede { color: var(--line); margin: 0 0 16px; max-width: 430px; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+.how { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; padding: 44px 0 10px; }
+.how video { width: 100%; border-radius: 8px; display: block; background: #000; }
+.how dl { margin: 0; } .how dt { font: 700 26px "Barlow Condensed", sans-serif; margin-top: 14px; } .how dt:first-child { margin-top: 0; } .how dd { margin: 2px 0 0; color: var(--muted); }
+.card details { margin-top: 8px; } .card summary { cursor: pointer; color: var(--cyan); font-weight: 600; } .card .specs { font-size: 14.5px; }
+.card .acts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; } .card .acts .btn { padding: 8px 14px; font-size: 15px; margin: 0; }
+.shoplinks { margin-top: 28px; color: var(--muted); font-size: 14.5px; } .shoplinks summary { cursor: pointer; } .shoplinks ul { padding-left: 18px; }
+@media (max-width: 760px) { .grid2, .row, .how { grid-template-columns: 1fr; } .top .ph { display: none; } .hero .lede { font-size: 17px; }
+  .hero img { height: 300px; object-position: 70% 70%; } .hero .txt { position: static; background: none; padding: 16px var(--g) 0; } .hero h1 { text-shadow: none; } .hero .lede { text-shadow: none; color: var(--muted); } }
 </style></head>
 <body>
 <div style="background:#ff9a82;color:#071c40;text-align:center;font-weight:600;padding:6px 12px">PREVIEW for Technical Precision: not public yet</div>
@@ -231,7 +241,7 @@ function init() {
 }
 document.querySelectorAll('[data-stl]').forEach(b => b.addEventListener('click', () => {
   if (!r) init();
-  dlg.showModal(); document.getElementById('vt').textContent = b.closest('section').querySelector('h2').firstChild.textContent.trim() + ' · 3D';
+  dlg.showModal(); document.getElementById('vt').textContent = (b.dataset.name || b.closest('section').querySelector('h2').firstChild.textContent.trim()) + ' · 3D';
   const w = cv.clientWidth, h = cv.clientHeight; r.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix();
   new STLLoader().load('stl/' + b.dataset.stl + '.stl', g => {
     if (mesh) sc.remove(mesh);
