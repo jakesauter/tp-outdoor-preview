@@ -237,7 +237,7 @@ document.querySelectorAll('[data-stl]').forEach(b => b.addEventListener('click',
     if (mesh) sc.remove(mesh);
     g.rotateX(-Math.PI / 2); g.scale(1, 1, -1); g.computeVertexNormals(); g.computeBoundingBox();
     const bb = g.boundingBox, c = new THREE.Vector3(); bb.getCenter(c); g.translate(-c.x, -bb.min.y, -c.z);
-    mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: 0x9aa3ad, metalness: .35, roughness: .5, side: THREE.DoubleSide })); sc.add(mesh);
+    mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial(g.hasColors ? { vertexColors: true, metalness: .25, roughness: .5, side: THREE.DoubleSide } : { color: 0x9aa3ad, metalness: .35, roughness: .5, side: THREE.DoubleSide })); sc.add(mesh);
     const size = bb.getSize(new THREE.Vector3()).length();
     const k = cam.aspect < 1 ? 1.25 / cam.aspect * .9 : .9; cam.position.set(size * k, size * .6 * k / .9, size * k); ctl.target.set(0, (bb.max.y - bb.min.y) / 2, 0); ctl.update();
   });

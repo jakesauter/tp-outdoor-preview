@@ -86,7 +86,7 @@ dialog .bar { display: flex; justify-content: space-between; align-items: center
   <div class="grid2">
     <figure class="dwg"><img src="dwg/mx-gate.svg" alt="Dimensioned drawing of the Snake Gate Module" loading="lazy"><figcaption>Front, right and top views, inches. Original Technical Precision design.</figcaption></figure>
     <div><img class="render" src="img/mx-gate.png" alt="" loading="lazy" width="1000" height="750">
-      <table class="specs"><tr><th>Module</th><td>40&quot; on center (one rider, over the 1 m standard), 27&quot; deep</td></tr><tr><th>Gate</th><td>33&quot; x 20&quot;, stands 19.9&quot; leaning 6° (FIM range 500–520 mm)</td></tr><tr><th>Frame</th><td>1-1/2&quot; x 11 ga gate on a 2&quot; x 11 ga tube ladder, bolt-together ends</td></tr><tr><th>Drop</th><td>toward the rider, by gravity: catch flange on a turning pipe, no springs</td></tr><tr><th>Install</th><td>bolts and anchors only, no welding on site</td></tr><tr><th>Finish</th><td>powder coat, yellow gate</td></tr><tr><th>Weight</th><td>about 74 lb</td></tr></table>
+      <table class="specs"><tr><th>Module</th><td>40&quot; on center (one rider, over the 1 m standard), 27&quot; deep</td></tr><tr><th>Gate</th><td>33&quot; x 20&quot;, stands 19.9&quot; leaning 6° (FIM range 500–520 mm)</td></tr><tr><th>Frame</th><td>1-1/2&quot; x 11 ga gate on a 2&quot; x 11 ga tube ladder, bolt-together ends</td></tr><tr><th>Drop</th><td>toward the rider, by gravity: catch flange on a turning pipe, no springs</td></tr><tr><th>Install</th><td>bolts and anchors only, no welding on site</td></tr><tr><th>Finish</th><td>powder coat: Ford tractor blue gate, grey base</td></tr><tr><th>Weight</th><td>about 74 lb</td></tr></table>
       <p class="note">Per module · 10+ modules $399 each · backyard 2-gate set with hand release $1,049. Made to order: about 1–2 weeks.</p>
       <a class="btn" href="#order" data-product="Snake Gate Module">Order or ask about this one</a>
       <button class="btn ghost" type="button" data-stl="mx-gate">Spin it in 3D</button></div>
@@ -143,7 +143,7 @@ dialog .bar { display: flex; justify-content: space-between; align-items: center
   <div class="grid2">
     <figure class="dwg"><img src="dwg/bmx-gate.svg" alt="Dimensioned drawing of the BMX Starting Gate" loading="lazy"><figcaption>Front, right and top views, inches. Original Technical Precision design.</figcaption></figure>
     <div><img class="render" src="img/bmx-gate.png" alt="" loading="lazy" width="1000" height="750">
-      <table class="specs"><tr><th>Size</th><td>80&quot; wide (2 lanes) x 27&quot; deep</td></tr><tr><th>Gate</th><td>77&quot; x 21&quot;, solid 14 ga face on 1-1/2&quot; x 11 ga tube</td></tr><tr><th>Drop</th><td>away from the riders, gas springs</td></tr><tr><th>Release</th><td>hand lever (backyard) or bought-in pneumatic system (tracks)</td></tr><tr><th>Install</th><td>bolts to a level start deck or pad</td></tr><tr><th>Finish</th><td>powder coat, yellow gate</td></tr><tr><th>Weight</th><td>about 154 lb</td></tr></table>
+      <table class="specs"><tr><th>Size</th><td>80&quot; wide (2 lanes) x 27&quot; deep</td></tr><tr><th>Gate</th><td>77&quot; x 21&quot;, solid 14 ga face on 1-1/2&quot; x 11 ga tube</td></tr><tr><th>Drop</th><td>away from the riders, gas springs</td></tr><tr><th>Release</th><td>hand lever (backyard) or bought-in pneumatic system (tracks)</td></tr><tr><th>Install</th><td>bolts to a level start deck or pad</td></tr><tr><th>Finish</th><td>powder coat: Ford tractor blue gate, grey base</td></tr><tr><th>Weight</th><td>about 154 lb</td></tr></table>
       <p class="note">Backyard 2-lane gate · 8-lane track gate (4 sections, steel only) $3,200, start system extra. Made to order: about 1–2 weeks.</p>
       <a class="btn" href="#order" data-product="BMX Starting Gate">Order or ask about this one</a>
       <button class="btn ghost" type="button" data-stl="bmx-gate">Spin it in 3D</button></div>
@@ -196,7 +196,7 @@ document.querySelectorAll('[data-stl]').forEach(b => b.addEventListener('click',
     if (mesh) sc.remove(mesh);
     g.rotateX(-Math.PI / 2); g.scale(1, 1, -1); g.computeVertexNormals(); g.computeBoundingBox();
     const bb = g.boundingBox, c = new THREE.Vector3(); bb.getCenter(c); g.translate(-c.x, -bb.min.y, -c.z);
-    mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: 0x9aa3ad, metalness: .35, roughness: .5, side: THREE.DoubleSide })); sc.add(mesh);
+    mesh = new THREE.Mesh(g, new THREE.MeshStandardMaterial(g.hasColors ? { vertexColors: true, metalness: .25, roughness: .5, side: THREE.DoubleSide } : { color: 0x9aa3ad, metalness: .35, roughness: .5, side: THREE.DoubleSide })); sc.add(mesh);
     const size = bb.getSize(new THREE.Vector3()).length();
     const k = cam.aspect < 1 ? 1.25 / cam.aspect * .9 : .9; cam.position.set(size * k, size * .6 * k / .9, size * k); ctl.target.set(0, (bb.max.y - bb.min.y) / 2, 0); ctl.update();
   });
